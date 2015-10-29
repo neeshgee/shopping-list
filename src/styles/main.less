@@ -1,9 +1,13 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab|Poiret+One|Playfair+Display|Megrim);
-@import "../../node_modules/bootstrap/less/bootstrap";
+// @import "../../node_modules/bootstrap/less/bootstrap";
 
 
 html {
   height: 100%;
+}
+
+body {
+  margin: 0;
 }
 
 
@@ -37,29 +41,6 @@ header {
     background-size: cover;
 }
 
-nav {
-  position: absolute;
-  top: 0;
-  font-family: 'Poiret One',sans-serif;
-  padding: 5px;
-}
-
-nav ul {
-  list-style: none;
-}
-
-nav li {
-  display: inline;
-}
-
-nav a {
-  color: #611380;
-  text-decoration: none;
-}
-
-nav a:hover {
-  color: #0F7096;
-}
 
 header h1 {
   font-family: 'Megrim',sans-serif;
@@ -81,6 +62,7 @@ header h1 {
   float: right;
   margin-top: 8px;
   margin-right: 8px;
+  background-color: rgba(0, 0, 0, 0);
 
 }
 
@@ -89,10 +71,10 @@ header h1 {
     margin-left: 250px;
     margin-top: 40px;
   img {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 10px;
-    margin-left: 65px;
+    width: 100px;
+    height: 100px;
+
+    margin-left: 90px;
  }
   p {
     font-size: 26px;
@@ -100,6 +82,7 @@ header h1 {
     color: #611380;
     font-weight: bold;
     margin-left: 20px;
+    margin-bottom: 100px;
  }
 
 }
@@ -108,10 +91,11 @@ header h1 {
     display: inline-block;
     margin-left: 275px;
     margin-right: 20px;
+    margin-top: 20px;
 
   img {
-    width: 240px;
-    height: 240px;
+    width: 140px;
+    height: 140px;
  }
 
   p {
@@ -125,13 +109,133 @@ header h1 {
 
 .money {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 60px;
+    margin-top: 30px;
+
+  img {
+    width: 140px;
+    height: 140px;
+    margin-left: 60px;
+
+  }
 
   p {
     font-size: 26px;
     font-family: 'Playfair Display',sans-serif;
     color: #611380;
     font-weight: bold;
-    margin-left: 25px;
+    margin-left: 80px;
+    padding-bottom: 100px;
+    margin-top: 0;
    }
+}
+
+.follow {
+  background-image: url('images/burries.jpg');
+  width: 100%;
+  height: 500px;
+
+  img {
+    width: 75px;
+    height: 75px;
+    margin-bottom: 100px;
+
+  }
+
+  p {
+    color: white;
+    font-size: 60px;
+    font-family: 'Megrim',sans-serif;
+    margin-bottom: 0;
+  }
+
+  .fb {
+    width: 70px;
+    height: 70px;
+  }
+
+  span {
+    color: white;
+    font-size: 20px;
+    font-family: 'Raleway',sans-serif;
+    padding: 10px;
+    
+}
+
+ a {
+   color: white;
+   font-size: 20px;
+   font-family: 'Raleway';
+   padding: 10px;
+   text-decoration: none;
+
+ }
+
+}
+
+
+
+#modal {
+  position: absolute;
+  background-color: rgba(97, 19, 128, 1);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+
+  button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+  }
+
+  nav {
+    margin-top: 150px;
+    text-align: center;
+ }
+
+  ul {
+    list-style: none;
+
+  }
+
+  li {
+    padding-bottom: 20px;
+    padding-left: 400px;
+    padding-right: 400px;
+
+  }
+
+  a {
+    color: white;
+    font-size: 60px;
+    font-family: 'Raleway',sans-serif;
+    text-decoration: none;
+    font-weight: lighter;
+  }
+
+  // a:hover {
+  //   background-color: #0F7096;
+  // }
+
+  transition: visibility 0.25s ease-in, opacity 0.25s ease-in;
+
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &.visible {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  margin-top: 50px;
+  margin-left: 1300px;
+  border: 2px solid #0F7096;
+  border-radius: 50%;
 }
