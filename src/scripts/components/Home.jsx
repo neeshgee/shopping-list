@@ -2,6 +2,23 @@ import React from 'react';
 import $ from 'jquery';
 import Router from '../router';
 
+export default class NavigationItem extends React.Component {
+  render() {
+    let className;
+    className = 'hvr-sweep-to-right';
+
+
+  return (
+    <li className={className}>
+      <a href={this.props.to}>
+        {this.props.label}
+      </a>
+    </li>
+  );
+ }
+}
+
+
 export default class Home extends React.Component {
 
   constructor(props) {
@@ -11,16 +28,6 @@ export default class Home extends React.Component {
       modalDisplay: 'hidden'
     }
   }
-
-  // handleSubmit = () => {
-  //   $('button').click(function () {
-  //     $('#modal').show(500);
-  //   });
-  //
-  //   $('#close').click(function () {
-  //     $('#modal').hide(1000);
-  //   });
-  // }
 
   showMenu = () => {
     this.setState({modalDisplay: 'visible'});
@@ -72,10 +79,10 @@ export default class Home extends React.Component {
     <div id="modal" className={this.state.modalDisplay}>
       <nav>
         <ul>
-          <a href="#"><li className="hvr-sweep-to-right">Home</li></a>
-          <a href="#"><li className="hvr-sweep-to-right">Sign In</li></a>
-          <a href="#"><li className="hvr-sweep-to-right">Shop</li></a>
-          <a href="#"><li className="hvr-sweep-to-right">Trips</li></a>
+          <NavigationItem current={this.props.current === 'home'} onClick={this.hideMenu} label="Home" to="#"  />
+          <NavigationItem current={this.props.current === 'signIn'} onClick={this.hideMenu} label="Sign In" to="#/sign"  />
+          <NavigationItem current={this.props.current === 'shop'} onClick={this.hideMenu} label="Shop" to="#/shop" />
+          <NavigationItem current={this.props.current === 'makeTrip'} onClick={this.hideMenu} label="Trip" to="#/trip"  />
         </ul>
       </nav>
       <button id="close" onClick={this.hideMenu}><img className="close" src="images/close.svg" width="80px" height="80px" /></button>

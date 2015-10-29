@@ -12,7 +12,7 @@ export default class Router extends Backbone.Router {
   home() {
     this.current = 'home';
   }
-  
+
   shop() {
     this.current = 'shop';
   }
@@ -21,7 +21,7 @@ export default class Router extends Backbone.Router {
     this.current = 'signIn';
   }
 
-  trip() {
+  makeTrip() {
     this.current = 'makeTrip';
   }
 

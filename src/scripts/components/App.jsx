@@ -3,6 +3,8 @@ import Home from './Home.jsx';
 import MakeTrip from './MakeTrip.jsx';
 import Shop from './Shop.jsx';
 import SignIn from './SignIn.jsx';
+import Router from '../router.js';
+
 
 export default class App extends React.Component {
 
@@ -19,11 +21,11 @@ export default class App extends React.Component {
         .on('route', this.onRoute);
     }
 
-    componentWillUnmount() {
-      this.props
-        .router
-        .off('route', this.onRoute);
-    }
+    // componentWillUnmount() {
+    //   this.props
+    //     .router
+    //     .off('route', this.onRoute);
+    // }
 
     onRoute = () => {
       this.setState({
