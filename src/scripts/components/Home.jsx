@@ -1,22 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import Router from '../router';
-
-export default class NavigationItem extends React.Component {
-  render() {
-    let className;
-    className = 'hvr-sweep-to-right';
-
-
-  return (
-    <li className={className}>
-      <a href={this.props.to}>
-        {this.props.label}
-      </a>
-    </li>
-  );
- }
-}
+import NavigationItem from './NavigationItem.jsx';
 
 
 export default class Home extends React.Component {
