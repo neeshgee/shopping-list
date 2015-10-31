@@ -16,7 +16,7 @@ export default class Home extends React.Component {
 
   showMenu = () => {
     this.setState({modalDisplay: 'visible'});
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   hideMenu = () => {

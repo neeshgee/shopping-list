@@ -3,6 +3,11 @@ import NavigationItem from './NavigationItem.jsx';
 
 
 export default class MakeTrip extends React.Component {
+  handleSignOut = () => {
+    Parse.User.logOut();
+    console.log('signedout');
+  }
+
   constructor(props) {
     super(props)
 
@@ -13,7 +18,7 @@ export default class MakeTrip extends React.Component {
 
   showMenu = () => {
     this.setState({modalDisplay: 'visible'});
-    console.log(this.state);
+    // console.log(this.state);
   }
 
   hideMenu = () => {
@@ -36,6 +41,7 @@ export default class MakeTrip extends React.Component {
               <NavigationItem current={this.props.current === 'signIn'} onClick={this.hideMenu} label="Sign In" to="#/sign"  />
               <NavigationItem current={this.props.current === 'shop'} onClick={this.hideMenu} label="Shop" to="#/shop" />
               <NavigationItem current={this.props.current === 'makeTrip'} onClick={this.hideMenu} label="Trip" to="#/trip"  />
+              <NavigationItem current={this.props.current === 'home'} onClick={this.handleSignOut} label="Logout" to="#"  />
             </ul>
           </nav>
           <button id="close" onClick={this.hideMenu}><img className="close" src="images/close.svg" width="80px" height="80px" /></button>

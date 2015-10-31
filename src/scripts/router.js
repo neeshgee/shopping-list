@@ -6,7 +6,8 @@ export default class Router extends Backbone.Router {
       '' : 'home',
       'shop' : 'shop',
       'sign' : 'signIn',
-      'trip' : 'makeTrip'
+      'trip' : 'makeTrip',
+      'up' : 'signUp'
     }
   }
   home() {
@@ -23,6 +24,10 @@ export default class Router extends Backbone.Router {
 
   makeTrip() {
     this.current = 'makeTrip';
+  }
+
+  signUp() {
+    this.current = 'signUp';
   }
 
   initialize() {

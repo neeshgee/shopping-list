@@ -1,6 +1,14 @@
 window.$ = window.jQuery = require('jquery');
 
-import $ from 'jquery';
+import Parse from 'parse';
+
+Parse.initialize(
+  "OgXEcaYXrnPIaG04dhXBjbyHB1VhGdqGD3KxiLbT",
+  "UX7UBPwWnTRVQUP6vhcotqewIr5PJQtQORlMwzVx"
+);
+
+
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Router from './router';

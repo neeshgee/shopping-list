@@ -3,6 +3,7 @@ import Home from './Home.jsx';
 import MakeTrip from './MakeTrip.jsx';
 import Shop from './Shop.jsx';
 import SignIn from './SignIn.jsx';
+import SignUp from './SignUp.jsx';
 import Router from '../router.js';
 
 
@@ -45,6 +46,9 @@ export default class App extends React.Component {
           break;
         case 'makeTrip' :
           currentView = <MakeTrip />;
+          break;
+        case 'signUp' :
+          currentView = <SignUp />;
           break;
         default :
         currentView = <Home />;
