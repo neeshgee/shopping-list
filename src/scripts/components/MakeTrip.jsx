@@ -34,6 +34,16 @@ export default class MakeTrip extends React.Component {
           <p>Ready to hit the grocery store? Pull up your saved trips here.</p>
           <p>You can also manage, add, or delete your trips.</p>
         </div>
+        <div className="footer">
+          <footer>
+            <div>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            </div>
+            <span>&copy; 2015 Tanessia Gordon</span>
+            <span>email: tanessiagordon18@gmail.com</span>
+          </footer>
+        </div>
         <div id="modal" className={this.state.modalDisplay}>
           <nav>
             <ul>

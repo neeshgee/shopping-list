@@ -57,7 +57,16 @@ export default class Results extends React.Component {
           <p>Results...</p>
           <div className="res">{results}</div>
         </div>
-
+        <div className="footer">
+          <footer>
+            <div>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            </div>
+            <span>&copy; 2015 Tanessia Gordon</span>
+            <span>email: tanessiagordon18@gmail.com</span>
+          </footer>
+        </div>
           <div id="modal" className={this.state.modalDisplay}>
             <nav>
               <ul>

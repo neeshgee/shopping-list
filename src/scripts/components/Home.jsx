@@ -46,17 +46,20 @@ export default class Home extends React.Component {
       </div>
       </div>
       <div className="follow">
-        <p>Follow Us!</p>
-        <a href="#"><img className="hvr-push fb" src="./images/fblike.png" /></a>
-        <a href="#"><img className="hvr-push" src="./images/linked.png" /></a>
-        <a href="#"><img className="hvr-push" src="./images/twitter.png" /></a>
-        <div>
-    <footer>
-      <a href="#">About Us</a>
-      <a href="#">Contact Us</a>
 
-        <span>&copy; 2015 Tanessia Gordon</span>
-        <span>email: tanessiagordon18@gmail.com</span>
+        <div className="icons">
+        <a href="#"><img className="hvr-pulse fb" src="./images/fblike.png" /></a>
+        <a href="#"><img className="hvr-pulse" src="./images/linked.png" /></a>
+        <a href="#"><img className="hvr-pulse" src="./images/twitter.png" /></a>
+        </div>
+        <div>
+        <footer>
+          <div>
+          <a href="#">About Us</a>
+          <a href="#">Contact Us</a>
+          </div>
+          <span>&copy; 2015 Tanessia Gordon</span>
+          <span>email: tanessiagordon18@gmail.com</span>
         </footer>
       </div>
       </div>

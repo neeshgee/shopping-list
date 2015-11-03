@@ -45,6 +45,16 @@ export default class Shop extends React.Component {
           </ul>
         </form>
         </div>
+        <div className="footer">
+          <footer>
+            <div>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+            </div>
+            <span>&copy; 2015 Tanessia Gordon</span>
+            <span>email: tanessiagordon18@gmail.com</span>
+          </footer>
+        </div>
         <div id="modal" className={this.state.modalDisplay}>
           <nav>
             <ul>
