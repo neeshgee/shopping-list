@@ -4,6 +4,8 @@ import MakeTrip from './MakeTrip.jsx';
 import Shop from './Shop.jsx';
 import SignIn from './SignIn.jsx';
 import SignUp from './SignUp.jsx';
+import Results from './Results.jsx';
+import ResultsDetail from './ResultsDetail.jsx';
 import Router from '../router.js';
 
 
@@ -49,6 +51,12 @@ export default class App extends React.Component {
           break;
         case 'signUp' :
           currentView = <SignUp />;
+          break;
+        case 'results' :
+          currentView = <Results />;
+          break;
+        case 'searchDetails' :
+          currentView= <ResultsDetail />;
           break;
         default :
         currentView = <Home />;
