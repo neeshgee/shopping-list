@@ -1,8 +1,15 @@
 import React from 'react';
+import Parse from 'parse';
 import NavigationItem from './NavigationItem.jsx';
+import Trip from '../Trip.js';
+import ResultsDetail from './ResultsDetail.jsx';
 
 
 export default class MakeTrip extends React.Component {
+
+
+
+
   handleSignOut = () => {
     Parse.User.logOut();
     console.log('signedout');
@@ -31,8 +38,10 @@ export default class MakeTrip extends React.Component {
           <button onClick={this.showMenu} className="menu"><img src="http://oswegocountytoday.com/wp-content/themes/giornalismo/images/mobile-nav-icon.png" width="40px"  height="40px" alt="" /></button>
           <h1>Trips</h1>
         <div className="trips">
-          <p>Ready to hit the grocery store? Pull up your saved trips here.</p>
-          <p>You can also manage, add, or delete your trips.</p>
+          <p>Ready to hit the grocery store?</p>
+          <p>You can also delete your coupons here after you use them.</p>
+          <h2>Coupons</h2>
+          
         </div>
         <div className="footer">
           <footer>

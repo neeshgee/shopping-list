@@ -30,7 +30,7 @@ export default class Home extends React.Component {
        <h1>Shopping Trip</h1>
      </header>
      <div className="mid">
-       <h2>Couponing at it's finest</h2>
+       <h2>Couponing at its finest</h2>
       <div className="middle">
       <div className="money">
         <img src="https://cdn4.iconfinder.com/data/icons/dot/256/usd_dollar_money_cash.png" alt="" />
