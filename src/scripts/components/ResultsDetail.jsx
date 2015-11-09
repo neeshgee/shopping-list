@@ -6,10 +6,20 @@ import Trip from '../Trip.js';
 export default class ResultsDetail extends React.Component {
   handleClick = () => {
     console.log('clicked');
+    
     let trip = new Trip();
+
     let image = this.props.coupon.get('Image').url();
 
-    trip.set("image", image);
+    if (currentUser) {
+
+    }
+
+    // Make this into: "Find the users first Trip or make a new trip if they have none";
+    // make sure the trip belongs to the users
+
+    // add this image to the trip
+    trip.add("images", image);
     trip.set("keyword", 'saved');
 
     trip.save(null, {
@@ -21,9 +31,15 @@ export default class ResultsDetail extends React.Component {
       }
     });
 
+}
 
+  constructor(props) {
+    super(props);
+    let currentUser = Parse.User.current();
 
-
+    this.state = {
+      currentUser: currentUser
+    }
   }
 
   render() {

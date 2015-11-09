@@ -21,7 +21,7 @@ gulp.task('html', () => {
 gulp.task('script', () => {
   browserify({
       entries: ['./src/scripts/main.jsx'],
-      extension: ['.js', '.jsx'],
+      extensions: ['.js', '.jsx'],
       debug: true
     }).transform(babelify.configure({
       optional: ['es7.classProperties']
