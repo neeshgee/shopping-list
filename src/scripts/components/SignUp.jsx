@@ -4,24 +4,20 @@ import Backbone from 'backbone';
 import Parse from 'parse';
 
 export default class SignUp extends React.Component {
-
-
   handleSubmit = (event) => {
     event.preventDefault();
-
     var user = new Parse.User();
     user.set("password", this.refs.password.value);
     user.set("username", this.refs.email.value);
 
-
     user.signUp(null, {
       success: function(user) {
         Backbone.history.navigate( `/shop`, true);
-  },
-  error: function(user, error) {
+      },
+      error: function(user, error) {
 
-    alert("Error: " + error.code + " " + error.message);
-  }
+        alert("Error: " + error.code + " " + error.message);
+      }
 });
   }
 

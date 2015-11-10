@@ -7,7 +7,7 @@ export default class TripDetail extends React.Component {
   render() {
     return (
       <div className="tripdetail">
-        <img src={this.props.image} />
+        <img src={this.props.images.get("images")} />
       </div>
     )
   }

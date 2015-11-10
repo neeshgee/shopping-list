@@ -24,10 +24,10 @@ export default class MakeTrip extends React.Component {
   componentWillMount() {
     this.query.equalTo("user", this.state.currentUser);
     this.query
-    .first({
-      success: (trip) => {
+    .find({
+      success: (results) => {
         this.setState({
-          images: trip.get('images')
+          images: results
         });
       },
       error: function(error) {
@@ -40,7 +40,7 @@ export default class MakeTrip extends React.Component {
     let images = this.state
       .images
       .map((image, i) => {
-        return <TripDetail image={image} key={i}/>
+        return <TripDetail images={image} key={i}/>
       })
     return (
       <main>

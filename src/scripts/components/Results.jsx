@@ -28,7 +28,6 @@ export default class Results extends React.Component {
           this.setState({
             coupons: results
           });
-          console.log(this.query);
         }
       });
   }

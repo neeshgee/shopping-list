@@ -10,29 +10,7 @@ export default class Shop extends React.Component {
     Backbone.history.navigate( `/results?keyword=${keyword}`, true);
   }
 
-  handleSignOut = () => {
-    Parse.User.logOut();
-    Backbone.history.navigate('#', true);
-    console.log('signedout');
-  }
-
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      modalDisplay: 'hidden'
-    }
-  }
-
-  showMenu = () => {
-    this.setState({modalDisplay: 'visible'});
-    // console.log(this.state);
-  }
-
-  hideMenu = () => {
-    this.setState({modalDisplay: 'hidden'});
-  }
-
+  
   render () {
     return (
       <main>
