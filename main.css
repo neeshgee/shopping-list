@@ -1,0 +1,675 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway|Roboto+Slab|Poiret+One|Playfair+Display|Megrim);
+html {
+  min-height: 100vh;
+}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+.container {
+  margin: 0;
+  background-image: url("images/compbg.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+.container.home {
+  height: 100vh;
+}
+.container h1 {
+  text-align: center;
+  font-size: 120px;
+  font-family: 'Megrim', serif;
+  color: white;
+}
+main {
+  flex: 1;
+}
+.container.home {
+  background-image: url("images/headerpic2.jpg");
+}
+.mid {
+  width: 100%;
+  height: 300px;
+  display: inline;
+}
+.mid h2 {
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 55px;
+  text-align: center;
+  color: #0F7096;
+}
+.middle {
+  display: inline-flex;
+}
+header {
+  display: inline-block;
+  width: 100%;
+  height: 100vh;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+header h1 {
+  font-family: 'Megrim', sans-serif;
+  font-size: 150px;
+  text-align: center;
+  color: white;
+  font-weight: lighter;
+  margin-top: 275px;
+}
+.menu {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #611380;
+  border-radius: 10%;
+  padding: 5px;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: rgba(0, 0, 0, 0);
+}
+.clock {
+  display: inline-block;
+  margin-left: 250px;
+  margin-top: 40px;
+}
+.clock img {
+  width: 100px;
+  height: 100px;
+  margin-left: 90px;
+}
+.clock p {
+  font-size: 26px;
+  font-family: 'Playfair Display', sans-serif;
+  color: #611380;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-bottom: 100px;
+}
+.check {
+  display: inline-block;
+  margin-left: 275px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+.check img {
+  width: 140px;
+  height: 140px;
+}
+.check p {
+  font-size: 26px;
+  font-family: 'Playfair Display', sans-serif;
+  color: #611380;
+  font-weight: bold;
+}
+.money {
+  display: inline-block;
+  margin-left: 60px;
+  margin-top: 30px;
+}
+.money img {
+  width: 140px;
+  height: 140px;
+  margin-left: 60px;
+}
+.money p {
+  font-size: 26px;
+  font-family: 'Playfair Display', sans-serif;
+  color: #611380;
+  font-weight: bold;
+  margin-left: 80px;
+  padding-bottom: 100px;
+  margin-top: 0;
+}
+.follow {
+  display: none;
+}
+.container.home .follow {
+  display: block;
+  width: 100%;
+}
+.container.home .follow img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.container.home .follow .fb {
+  width: 50px;
+  height: 50px;
+}
+.container.home .follow span {
+  color: white;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  margin: 10px;
+}
+.container.home .follow a {
+  color: white;
+  font-size: 20px;
+  font-family: 'Raleway';
+  padding: 10px;
+  text-decoration: none;
+}
+#modal {
+  position: absolute;
+  background-color: #611380;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: visibility 0.25s ease-in, opacity 0.25s ease-in;
+}
+#modal button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+#modal nav {
+  margin-top: 150px;
+  text-align: center;
+}
+#modal ul {
+  list-style: none;
+}
+#modal li {
+  padding-bottom: 20px;
+  padding-left: 600px;
+  padding-right: 600px;
+}
+#modal a {
+  color: white;
+  font-size: 60px;
+  font-family: 'Raleway', sans-serif;
+  text-decoration: none;
+  font-weight: lighter;
+}
+#modal.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+#modal.visible {
+  visibility: visible;
+  opacity: 1;
+}
+.close {
+  position: absolute;
+  top: 0;
+  margin-top: 50px;
+  margin-left: 1300px;
+  border: 2px solid #0F7096;
+  border-radius: 50%;
+}
+.signin {
+  text-align: center;
+  height: 500px;
+}
+.signin ul {
+  list-style: none;
+}
+.signin button {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  font-size: 16px;
+  color: white;
+}
+.signin .textarea {
+  width: 450px;
+  height: 40px;
+  margin: 10px;
+  border: 2px solid #0F7096;
+  border-radius: 5%;
+  font-size: 20px;
+}
+.signin .submit {
+  background-color: rgba(97, 19, 128, 0.5);
+  border: 1px solid #0F7096;
+  border-radius: 5%;
+  width: 200px;
+  height: 50px;
+  color: white;
+  font-size: 26px;
+  font-family: 'Raleway', sans-serif;
+}
+.signin p {
+  color: white;
+  font-family: 'Raleway', serif;
+}
+.search {
+  text-align: center;
+  height: 100vh;
+}
+.search ul {
+  list-style: none;
+}
+.search p {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+.search .searchbox {
+  width: 450px;
+  height: 40px;
+  font-size: 20px;
+  border: 2px solid #0F7096;
+  border-radius: 5%;
+  margin: 10px;
+}
+.search .submit {
+  width: 200px;
+  height: 50px;
+  background-color: rgba(97, 19, 128, 0.5);
+  border: 1px solid #0F7096;
+  border-radius: 5%;
+  font-size: 26px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+}
+.trips {
+  text-align: center;
+  height: 100vh;
+}
+.trips p {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 26px;
+}
+.results {
+  text-align: center;
+  height: 100vh;
+}
+.results h2 {
+  color: white;
+  font-size: 28px;
+  font-family: 'Raleway', sans-serif;
+}
+.results p {
+  color: white;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  font-style: italic;
+}
+.details p {
+  margin: 5px;
+}
+.details img {
+  border: 4px solid #0F7096;
+  border-radius: 5%;
+}
+.details button {
+  margin: 0;
+  background-color: rgba(97, 19, 128, 0.5);
+  color: white;
+  font-size: 12px;
+  border: 1px solid #0F7096;
+  border-radius: 5%;
+}
+footer {
+  text-align: center;
+  display: block;
+}
+.icons {
+  text-align: center;
+}
+.container.home .footer {
+  background-image: url('images/burries.jpg');
+}
+.footer {
+  padding-bottom: 10px;
+}
+.footer span {
+  color: white;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  padding-right: 10px;
+}
+.footer a {
+  color: white;
+  font-size: 20px;
+  font-family: 'Raleway';
+  text-decoration: none;
+  padding-right: 10px;
+}
+@media only screen and (min-width: 0px) and (max-width: 780px) {
+  header {
+    width: 100%;
+    height: 100vh;
+  }
+  footer {
+    width: 100%;
+  }
+  #modal {
+    width: 100%;
+    height: 100vh;
+  }
+  #modal li {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-bottom: 10px;
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .mid {
+    display: none;
+  }
+  .mid h2 {
+    font-size: 34px;
+  }
+  .middle {
+    display: none;
+    text-align: center;
+  }
+  .clock {
+    text-align: center;
+    margin: 0;
+  }
+  .clock p {
+    display: none;
+  }
+  .clock img {
+    width: 130px;
+    height: 130px;
+    padding-top: 10px;
+    margin-right: 80px;
+  }
+  .check {
+    margin: 0;
+  }
+  .check p {
+    display: none;
+  }
+  .check img {
+    width: 150px;
+    height: 150px;
+    margin-right: 0;
+  }
+  .money {
+    margin: 0;
+  }
+  .money p {
+    display: none;
+  }
+  .money img {
+    width: 170px;
+    height: 170px;
+    margin: 0;
+  }
+  .details img {
+    width: 400px;
+  }
+  .tripdetail img {
+    width: 400px;
+  }
+  .searchbox {
+    width: 10px;
+    height: 30px;
+  }
+  .textarea {
+    width: 50px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 780px) and only screen and (min-width: 780px) and (max-width: 1100px) {
+  .check {
+    margin: 0;
+  }
+  .check p {
+    font-size: 20px;
+  }
+  .check img {
+    width: 100px;
+    height: 100px;
+    margin-right: 0;
+  }
+  .money {
+    margin: 0;
+  }
+  .money img {
+    margin: 0;
+    width: 110px;
+    height: 110px;
+  }
+  .money p {
+    margin-left: 10px;
+    font-size: 20px;
+  }
+  .clock {
+    margin: 0;
+  }
+  .clock p {
+    font-size: 20px;
+  }
+  .clock img {
+    width: 95px;
+    height: 95px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 780px) and only screen and (min-width: 480px) and (max-width: 640px) {
+  .middle {
+    display: block;
+    text-align: center;
+  }
+  .clock {
+    text-align: center;
+    margin: 0;
+  }
+  .clock p {
+    display: none;
+  }
+  .clock img {
+    width: 120px;
+    height: 120px;
+    padding-top: 10px;
+    margin-right: 80px;
+  }
+  .check {
+    margin: 0;
+  }
+  .check p {
+    display: none;
+  }
+  .check img {
+    width: 130px;
+    height: 130px;
+    margin-right: 0;
+  }
+  .money {
+    margin: 0;
+  }
+  .money p {
+    display: none;
+  }
+  .money img {
+    width: 170px;
+    height: 170px;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 780px) and only screen and (min-width: 680px) and (max-width: 979px) and (orientation: portrait) {
+  #modal {
+    width: 100%;
+    height: 100vh;
+  }
+  #modal li {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .clock {
+    text-align: center;
+    margin: 0;
+  }
+  .clock p {
+    display: none;
+  }
+  .clock img {
+    width: 110px;
+    height: 110px;
+    padding-top: 10px;
+    margin-right: 60px;
+  }
+  .check {
+    margin: 0;
+  }
+  .check p {
+    display: none;
+  }
+  .check img {
+    width: 140px;
+    height: 140px;
+  }
+  .money {
+    margin: 0;
+    margin-left: 50px;
+  }
+  .money p {
+    display: none;
+  }
+  .money img {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 780px) and only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  #modal li {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .clock {
+    text-align: center;
+    margin: 0;
+  }
+  .clock p {
+    display: none;
+  }
+  .clock img {
+    width: 110px;
+    height: 110px;
+    padding-top: 10px;
+    margin-right: 60px;
+  }
+  .check {
+    margin: 0;
+  }
+  .check p {
+    display: none;
+  }
+  .check img {
+    width: 150px;
+    height: 150px;
+  }
+  .money {
+    margin: 0;
+  }
+  .money p {
+    display: none;
+  }
+  .money img {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 780px) and only screen and (min-width: 970px) and (max-width: 1420px) {
+  #modal {
+    width: 100%;
+    height: 100vh;
+  }
+  #modal li {
+    padding-left: 300px;
+    padding-right: 300px;
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .clock p {
+    margin-left: 100px;
+  }
+  .check {
+    margin-right: 0;
+  }
+  .money {
+    margin-left: 5px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 780px) and only screen and (min-width: 780px) and (max-width: 990px) {
+  #modal li {
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 780px) and only screen and (min-width: 450px) and (max-width: 790px) {
+  .clock {
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+  }
+  .clock p {
+    display: none;
+  }
+  .clock img {
+    width: 90px;
+    height: 90px;
+    padding-top: 10px;
+    margin: 0;
+  }
+  .check {
+    margin: 0;
+    padding: 10px;
+  }
+  .check p {
+    display: none;
+  }
+  .check img {
+    width: 110px;
+    height: 110px;
+    margin: 0;
+  }
+  .money {
+    margin: 0;
+    padding: 10px;
+  }
+  .money p {
+    display: none;
+  }
+  .money img {
+    width: 120px;
+    height: 120px;
+    margin: 0;
+    margin-left: 220px;
+  }
+  .searchbox {
+    width: 100px;
+    height: 30px;
+    margin-right: 100px;
+  }
+}
+@media only screen and (min-width: 0px) and (max-width: 780px) and only screen and (min-width: 1000px) and (max-width: 1100px) {
+  .clock {
+    margin: 0;
+  }
+  .check {
+    margin: 0;
+  }
+  .money {
+    margin: 0;
+  }
+}
