@@ -28,7 +28,7 @@ export default class App extends React.Component {
 
     showMenu = () => {
       this.setState({modalDisplay: 'visible'});
-      console.log(this.state);
+
     }
 
     hideMenu = () => {
@@ -40,12 +40,6 @@ export default class App extends React.Component {
       Backbone.history.navigate('#/', true);
       this.hideMenu();
     }
-
-    // componentWillUnmount() {
-    //   this.props
-    //     .router
-    //     .off('route', this.onRoute);
-    // }
 
     onRoute = () => {
       this.hideMenu();

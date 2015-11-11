@@ -48,7 +48,6 @@ export default class MakeTrip extends React.Component {
         <div className="trips">
           <p>Ready to hit the grocery store?</p>
           <p>You can also delete your coupons here after you use them.</p>
-          <h2>Coupons</h2>
           <div className="triplist">
             {images}
           </div>
