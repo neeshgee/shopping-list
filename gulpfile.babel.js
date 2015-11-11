@@ -16,6 +16,7 @@ gulp.task('html', () => {
     .pipe(sync.reload({
       stream: true
     }));
+     gulp.src('src/CNAME').pipe(gulp.dest('dist'))
 });
 
 gulp.task('script', () => {

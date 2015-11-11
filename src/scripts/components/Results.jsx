@@ -39,13 +39,13 @@ export default class Results extends React.Component {
         return <ResultsDetail coupon={coupon} key={i}/>;
       });
     return (
-      <div>
+      <main>
         <div className="results">
           <h2>You searched for &ldquo;{this.state.keyword}&rdquo;</h2>
           <p>Results...</p>
           <div className="res">{results}</div>
         </div>
-      </div>
+      </main>
     )
   }
 

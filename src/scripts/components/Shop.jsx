@@ -10,17 +10,17 @@ export default class Shop extends React.Component {
     Backbone.history.navigate( `/results?keyword=${keyword}`, true);
   }
 
-  
+
   render () {
     return (
       <main>
         <h1>Shop</h1>
         <div className="search">
           <p>In need of a coupon? Search for it here.</p>
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <ul>
             <li><input className="searchbox" ref="keyword" type="text" placeholder="I need coupons for..." /></li>
-            <li><input className="submit" onClick={this.handleSubmit} type="button" value="search" /></li>
+            <li><input className="submit" type="submit" value="search" /></li>
             </ul>
           </form>
         </div>
