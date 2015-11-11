@@ -8,6 +8,7 @@ body {
   min-height: 100vh;
 }
 .container {
+  min-height: 100vh;
   margin: 0;
   background-image: url("images/compbg.jpg");
   background-position: top;
@@ -240,7 +241,6 @@ header h1 {
 }
 .search {
   text-align: center;
-  height: 100vh;
 }
 .search ul {
   list-style: none;
@@ -271,7 +271,6 @@ header h1 {
 }
 .trips {
   text-align: center;
-  height: 100vh;
 }
 .trips p {
   color: white;
@@ -280,7 +279,6 @@ header h1 {
 }
 .results {
   text-align: center;
-  height: 100vh;
 }
 .results h2 {
   color: white;
